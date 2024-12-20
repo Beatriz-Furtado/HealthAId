@@ -246,7 +246,7 @@ def infeccioso(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty infeccioso:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of infectious diseases that are related to the patient's symptoms and age.
+    Based on these data, provide hypotheses of infectious diseases that are only related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -309,7 +309,7 @@ def manager(state: AgentsState) -> AgentsState:
     Structure the response in a medical document format. In the header indicate the pacient's name, age, age category identified and symptoms. 
     Then state the hypotheses collected with each disease symptoms and a brief description of the correlation of the symptoms with the patient's symptoms.
     Add the recommended medical examinations for the pacient. 
-    At the end, sign with the phrase: 'Take care of yourself! With affection, HealthAId.'
+    At the end, sign with the phrase: 'Cuide-se! Com carinho, HealthAId.'
     Do it like a medical record.
     Translate all the awnser to portuguese.
     """
