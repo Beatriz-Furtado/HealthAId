@@ -1,0 +1,79 @@
+Doença,Faixa de Idade,Sintomas,Especialista
+icterícia neonatal,recem-nascido,pele amarelada; olhos amarelados,hematologico
+infecção generalizada neonatal,recem-nascido,febre; fraqueza; dificuldade para respirar,infeccioso
+infecções congênitas,recem-nascido,alterações no desenvolvimento; baixo peso ao nascer,infeccioso
+alergia à proteína do leite de vaca (aplv),recem-nascido,dor abdominal; vômitos; diarreia,clinico_geral
+pneumonia,recem-nascido,febre; tosse; dificuldade para respirar,respiratorio
+doença do refluxo gostroesofágico,recem-nascido,regurgitação frequente; irritabilidade; dificuldade para ganhar peso,digestivo
+gastroenterite,recem-nascido,vômitos; diarreia; febre,digestivo
+meningite,recem-nascido,febre alta; rigidez na nuca; irritabilidade,neurologico
+cólica do lactente,recem-nascido,choro intenso; desconforto abdominal; gases,clinico_geral
+cardiopatia congênita,recem-nascido,dificuldade para respirar; cianose; cansaço,cardiovascular
+anemia,recem-nascido,palidez; fraqueza; cansaço,hematologico
+anemia hemolítica,recem-nascido,icterícia; cansaço; aumento do baço,hematologico
+síndrome gripal,lactente,tosse; febre; dor no corpo,clinico_geral
+bronquiolite,lactente,tosse; chiado no peito; dificuldade para respirar,respiratorio
+lactente chiador,lactente,chiado ao respirar; tosse frequente,respiratorio
+pneumonia,lactente,febre; tosse; dificuldade para respirar,respiratorio
+gastroenterite,lactente,vômitos; diarreia; desidratação,digestivo
+alergia à proteína do leite de vaca,lactente,vômitos; diarreia; irritação na pele,clinico_geral
+constipação intestinal,lactente,dificuldade para evacuar; dor abdominal; fezes ressecadas,digestivo
+meningite,lactente,febre alta; rigidez na nuca; irritabilidade,neurologico
+infecção urinária,lactente,febre; dor ao urinar; urina com odor forte,urinario
+cardiopática congênita,lactente,cansaço ao se alimentar; dificuldade para respirar; cianose,cardiovascular
+obstrução intestinal,lactente,vômitos; distensão abdominal; ausência de evacuação,digestivo
+hérnia inguinal,lactente,abaulamento na região inguinal; dor local; choro,clinico_geral
+hérnia escrotal,lactente,abaulamento no escroto; dor; irritação,clinico_geral
+hidrocele,lactente,inchaço no escroto; líquido ao redor do testículo,clinico_geral
+urticária,lactente,manchas vermelhas na pele; coceira; inchaço,dermatologico
+dermatite atópica,lactente,pele seca; coceira; lesões avermelhadas,dermatologico
+impetigo,lactente,bolhas na pele; crostas amarelas; coceira,dermatologico
+doenças exantemáticas,lactente,febre; manchas vermelhas no corpo; mal-estar,clinico_geral
+anemia,lactente,palidez; cansaço; falta de apetite,hematologico
+anemia hemolítica,lactente,icterícia; aumento do baço; cansaço,hematologico
+faringite,lactente,dor de garganta; febre; dificuldade para engolir,respiratorio
+laringite,lactente,rouquidão; tosse seca; dificuldade para respirar,respiratorio
+síndrome gripal,pre-escolar,febre; tosse; coriza,clinico_geral
+pneumonia,pre-escolar,febre alta; tosse persistente; dificuldade para respirar,respiratorio
+asma,pre-escolar,falta de ar; chiado no peito; tosse,respiratorio
+bronquite,pre-escolar,tosse; produção de muco; chiado no peito,respiratorio
+laringite,pre-escolar,rouquidão; tosse seca; dificuldade para respirar,respiratorio
+faringite,pre-escolar,dor de garganta; febre; dificuldade para engolir,respiratorio
+sinusite,pre-escolar,congestão nasal; dor facial; febre,respiratorio
+constipação intestinal,pre-escolar,dificuldade para evacuar; dor abdominal; fezes ressecadas,digestivo
+gastroenterite,pre-escolar,vômitos; diarreia; desidratação,digestivo 
+parasitose intestinal,pre-escolar,dor abdominal; diarreia; perda de peso,digestivo
+infecção urinária,pre-escolar,dor ao urinar; febre; urina com odor forte,urinario
+síndrome nefrótica,pre-escolar,inchaço; urina espumosa; cansaço,urinario
+síndrome nefrítica,pre-escolar,sangue na urina; hipertensão; inchaço,urinario
+urticária,pre-escolar,manchas vermelhas na pele; coceira; inchaço,dermatologico
+dermatite atópica,pre-escolar,pele seca; coceira; lesões avermelhadas,dermatologico
+impetigo,pre-escolar,bolhas na pele; crostas amarelas; coceira,dermatologico
+púrpura trombocitopênica,pre-escolar,manchas roxas na pele; sangramento gengival; cansaço,hematologico
+doenças exantemáticas,pre-escolar,febre; manchas vermelhas no corpo; mal-estar,clinico_geral
+meningite,pre-escolar,febre alta; rigidez na nuca; dor de cabeça,neurologico
+cardiopatia congênita,pre-escolar,cansaço; dificuldade para respirar; cianose,cardiovascular
+anemia hemolítica,pre-escolar,icterícia; aumento do baço; cansaço,hematologico
+anemia simples,pre-escolar,palidez; fraqueza; falta de apetite,hematologico
+dores do crescimento,pre-escolar,dor nas pernas; piora à noite; melhora com massagem,reumatologico
+síndrome gripal,escolar,febre; tosse; coriza,clinico_geral
+faringite,escolar,dor de garganta; febre; dificuldade para engolir,respiratorio
+laringite,escolar,rouquidão; tosse seca; dificuldade para respirar,respiratorio
+pneumonia,escolar,febre alta; tosse persistente; dificuldade para respirar,respiratorio
+asma,escolar,falta de ar; chiado no peito; tosse,respiratorio
+gastroenterite,escolar,vômitos; diarreia; dor abdominal,digestivo
+constipação intestinal,escolar,dificuldade para evacuar; dor abdominal; fezes ressecadas,digestivo
+gastrite,escolar,dor ou queimação no estômago; náusea; perda de apetite,digestivo
+refluxo gástrico,escolar,azia; regurgitação; dor no peito,digestivo
+infecção urinária,escolar,dor ao urinar; febre; urgência urinária,urinario
+síndrome nefrótica,escolar,inchaço; urina espumosa; cansaço,urinario
+síndrome nefrítica,escolar,sangue na urina; pressão alta; inchaço,urinario
+nefrolitíase,escolar,dor lombar intensa; náusea; dificuldade para urinar,urinario
+urticária,escolar,manchas vermelhas; coceira intensa; inchaço,dermatologico
+púrpura trombo,escolar,manchas roxas na pele; sangramento gengival; fadiga,hematologico
+impetigo,escolar,bolhas com crostas amarelas; coceira; vermelhidão,dermatologico
+enxaqueca,escolar,dor de cabeça intensa; sensibilidade à luz; náusea,neurologico
+meningite,escolar,febre alta; dor de cabeça; rigidez na nuca,neurologico
+febre reumática,escolar,febre; dores articulares; manchas na pele,reumatologico
+artrite reumatoide,escolar,dor articular; inchaço; rigidez matinal,reumatologico
+doenças exantemáticas,escolar,febre; manchas vermelhas no corpo; coceira,clinico_geral
