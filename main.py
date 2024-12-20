@@ -6,6 +6,7 @@ from langchain_core.messages import AIMessage, AnyMessage, HumanMessage, SystemM
 
 from langchain_community.document_loaders import CSVLoader
 from langchain_community.vectorstores import FAISS
+from flask import Flask, render_template, request, jsonify
 
 from pydantic import BaseModel, Field
 
@@ -191,7 +192,7 @@ def hematologico(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty hematologico:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of hematological diseases that are related to the patient's symptoms and age.   
+    Based on these data, provide hypotheses of hematological diseases that are related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -209,7 +210,7 @@ def digestivo(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty digestivo:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of digestive system diseases that are related to the patient's symptoms and age.   
+    Based on these data, provide hypotheses of digestive system diseases that are related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -227,7 +228,7 @@ def neurologico(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty neurologico:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of neurological diseases that are related to the patient's symptoms and age.   
+    Based on these data, provide hypotheses of neurological diseases that are related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -245,7 +246,7 @@ def infeccioso(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty infeccioso:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of infectious diseases that are related to the patient's symptoms and age.   
+    Based on these data, provide hypotheses of infectious diseases that are related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -263,7 +264,7 @@ def reumatologico(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty reumatologico:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of rheumatological diseases that are related to the patient's symptoms and age.   
+    Based on these data, provide hypotheses of rheumatological diseases that are related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -281,7 +282,7 @@ def clinico_geral(state: AgentsState) -> AgentsState:
     Here are the documents filtered for diseases related to age {age_range} and specialty clinico_geral:
     {filtered_docs}
 
-    Based on these data, provide hypotheses of non-specific diseases that are related to the patient's symptoms and age.   
+    Based on these data, provide hypotheses of non-specific diseases that are related to the patient's symptoms and age.
     """
     messages = [{"role": "system", "content": system_prompt}] + state["messages"]
     response = llm.invoke(messages)
@@ -304,9 +305,10 @@ def manager(state: AgentsState) -> AgentsState:
     system_prompt = """
     You are a medical writing specialist responsible for connecting all data received, without skipping or overwriting any data.
     Structure textually for each disease hypothesis. At the end, add the recommended medical examaminations.
-    
+
     Structure the response in a medical document format. In the header indicate the pacient's name, age, age category identified and symptoms. 
-    Then state the hypotheses collected with each disease symptoms and the recommended medical tests. 
+    Then state the hypotheses collected with each disease symptoms and a brief description of the correlation of the symptoms with the patient's symptoms.
+    Add the recommended medical examinations for the pacient. 
     At the end, sign with the phrase: 'Take care of yourself! With affection, HealthAId.'
     Do it like a medical record.
     Translate all the awnser to portuguese.
@@ -359,12 +361,8 @@ with open(output_file, "wb") as f:
 
 print(f"Grafo salvo como {output_file}" + "\n")
 
-while True:
-    user_input = input("Por favor, insira os dados e os sintomas: ")
-
-    if user_input.lower() in ['sair']:
-        break
-
+def process_input(user_input):
+    print(user_input)
     initial_state = AgentsState(
         messages=[HumanMessage(content=user_input)],
         pacient_symptoms=[],
@@ -380,6 +378,10 @@ while True:
                 for message in value['messages']:
                     if hasattr(message, 'content'):
                         final_message = message.content
+    
+    print(final_message)
 
     if final_message:
-        print(f"\nFinal Message: {final_message}")
+        return final_message
+    else:
+        return "Resposta não encontrada."
