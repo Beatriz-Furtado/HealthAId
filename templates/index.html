@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthAId - Diagnóstico Infantil</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HealthAId</h1>
+            <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+            <p class="subtitle">Assistente inteligente para diagnóstico na área da pediatria</p>
+        </header>
+
+        <div class="form-container">
+            {% if not response_message %}
+            <form method="POST">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+            
+                <label for="age">Idade:</label><br>
+                <input type="text" id="age" name="age" required><br><br>
+            
+                <label for="symptoms">Sintomas:</label><br>
+                <textarea id="symptoms" name="symptoms" required></textarea><br><br>
+            
+                <button type="submit">Enviar</button>
+            </form>
+            {% endif %}
+
+            {% if response_message %}
+            <div class="response-container">
+                <p><strong>Resultado do Diagnóstico:</strong></p>
+                <p>{{ response_message|safe }}</p>
+                <a href="/" class="back-link">Voltar ao Formulário</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
